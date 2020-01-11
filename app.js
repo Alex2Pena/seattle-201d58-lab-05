@@ -11,7 +11,7 @@ for the testSum() function below and check the console to see if the test passes
 // Write your code here
 function sum(a, b) { //eslint-disable-line
   var total = a + b;
-  // console.log (total);
+  console.log (total);
   return [total, "The sum of " + a + ' and ' + b + ' is ' + total + "."];
 }
 
@@ -35,7 +35,7 @@ testMultiply() function and see if the test passes.*/
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
 var total = a * b;
-// console.log(total);
+console.log(total);
 return [total, 'The product of ' + a + ' and ' + b + ' is ' + total + '.'];
 }
 
@@ -102,7 +102,7 @@ return [sumOfThree, + a + ',' + b + ',' + c +  ' was passed in as an array of nu
 
 // Here is the test for sumArray(); uncomment it to run it
 
-testSumArray(testArray); 
+// testSumArray(testArray); 
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -118,11 +118,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+  var a = testArray[0];
+  var b = testArray[1];
+  var c =  testArray[2];
+  var productOfTwo = multiply(a,b)[0];
+  var productOfThree = multiply(productOfTwo,c)[0];
+  // console.log(productOfThree);
+  return [productOfThree,'The numbers ' + a + ',' + b + ',' + c + ' have a product of ' + productOfThree + '.']
+  }
 
-}
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
