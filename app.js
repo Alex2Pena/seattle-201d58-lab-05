@@ -11,12 +11,12 @@ for the testSum() function below and check the console to see if the test passes
 // Write your code here
 function sum(a, b) { //eslint-disable-line
   var total = a + b;
-  // console.log (total);
+  console.log (total);
   return [total, "The sum of " + a + ' and ' + b + ' is ' + total + "."];
 }
 
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -35,12 +35,12 @@ testMultiply() function and see if the test passes.*/
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
 var total = a * b;
-// console.log(total);
+console.log(total);
 return [total, 'The product of ' + a + ' and ' + b + ' is ' + total + '.'];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -73,7 +73,7 @@ return [sumOfThreeNumbers, yz, a + ' and ' + b + ' and ' + c + ' sum to ' + sumO
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -118,11 +118,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+  var a = testArray[0];
+  var b = testArray[1];
+  var c =  testArray[2];
+  var productOfTwo = multiply(a,b)[0];
+  var productOfThree = multiply(productOfTwo,c)[0];
+  // console.log(productOfThree);
+  return [productOfThree,'The numbers ' + a + ',' + b + ',' + c + ' have a product of ' + productOfThree + '.']
+  }
 
-}
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -146,10 +153,20 @@ Test this function by hand in the console to get it working, and when you think 
 var testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+  var a = testDynamicArray[0];
+  var b = testDynamicArray[1];
+  var c = testDynamicArray[2];
+  var d = testDynamicArray[3];
+  var e = testDynamicArray[4];
+      var p1 = multiply(a,b)[0];
+      var p2 = multiply(p1,c)[0];
+      var p3 = multiply(p2,d)[0];
+      var p4 = multiply(p3,e)[0];
+// console.log(p4);
+return [p4,'The numbers ' + a + ',' + b + ',' + c + ',' + d + ',' + e + ' have a product of ' + p4 + '.'];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
