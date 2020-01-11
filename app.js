@@ -11,12 +11,12 @@ for the testSum() function below and check the console to see if the test passes
 // Write your code here
 function sum(a, b) { //eslint-disable-line
   var total = a + b;
-  console.log (total);
+  // console.log (total);
   return [total, "The sum of " + a + ' and ' + b + ' is ' + total + "."];
 }
 
 // Here is the test for sum(); uncomment it to run it
-testSum(4, 7);
+// testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -40,7 +40,7 @@ return [total, 'The product of ' + a + ' and ' + b + ' is ' + total + '.'];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
+// testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -64,10 +64,16 @@ testSumAndMultiply() function and see if the test passes.*/
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
 
+var sumOfTwoNumbers = sum(a,b)[0];
+var sumOfThreeNumbers = sum(sumOfTwoNumbers,c)[0];
+var yy = multiply(a,b)[0];
+var yz = multiply(yy,c)[0];
+console.log(sumOfThreeNumbers,yz);
+return [sumOfThreeNumbers, yz, a + ' and ' + b + ' and ' + c + ' sum to ' + sumOfThreeNumbers +  '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + yz + '.'];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
